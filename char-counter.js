@@ -6,9 +6,14 @@ productName.addEventListener("input", (event) => {
   remainingChars.textContent = charsRemaining;
 
   //use the chars remaining to add additional styles for the warning text
-  if (charsRemaining <= 10) {
+  if (charsRemaining === 0) {
+    remainingChars.classList.add("error");
+    productName.classList.add("error");
+  } else if (charsRemaining <= 10) {
     remainingChars.classList.add("warning");
     productName.classList.add("warning");
+    remainingChars.classList.remove("error");
+    productName.classList.remove("error");
   } else {
     remainingChars.classList.remove("warning");
     productName.classList.remove("warning");
