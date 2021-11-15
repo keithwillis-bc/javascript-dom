@@ -1,21 +1,11 @@
-document.getElementById("external-link").href = "http://www.google.com";
+let paragraphElement = document.querySelector("p");
 
-//Add a new link
-let newAnchor = document.createElement("a");
-newAnchor.href = "http://www.google.com";
-newAnchor.text = "Google";
+paragraphElement.addEventListener("click", (event) => {
+  event.target.textContent = "Clicked";
+});
 
-let firstParagraph = document.querySelector("p");
+let inputElement = document.querySelector("input");
 
-firstParagraph.append(newAnchor);
-
-//Remove element
-let h1 = document.querySelector("#intro-text");
-
-h1.remove();
-
-//move element
-firstParagraph.parentElement.append(firstParagraph);
-
-//innerHTML
-firstParagraph.innerHTML += ' <a href="http://www.amazon.com">Amazon.com</a>';
+inputElement.addEventListener("input", (event) => {
+  paragraphElement.textContent = event.target.value;
+});

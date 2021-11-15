@@ -4,16 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advanced Javascript</title>
-
-    <script src="app.js" defer></script>
+    <title>Character Counter</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="char-counter.js" defer></script>
   </head>
   <body>
-    <h1 id="intro-text">Hi there!</h1>
-    <p>I'm new</p>
-    <p class="p-link">
-      This is a
-      <a href="#" id="external-link">link</a>
-    </p>
+    <form>
+      <section class="control">
+        <label for="product-name">Product Name</label>
+        <input
+          type="text"
+          id="product-name"
+          name="product-name"
+          maxlength="60"
+        />
+        <span id="charcount"> <span id="remaining-chars">60</span>/60 </span>
+      </section>
+      <section>
+        <button type="submit">Submit</button>
+      </section>
+    </form>
   </body>
 </html>
